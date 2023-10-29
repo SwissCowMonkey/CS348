@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Room selector</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <img src="Housing.jpg" alt="Housing">
+    <h1>Add Room</h1>
+    Welcome to the Adding a room selector!
+    <br>
+    Time to add a room! Where would you like to live?
+    <br>
+        <select name="Choices" id="Choices">
+            <option value="Blank"> </option>
+            <option value="Freida">Freida</option>
+            <option value="Hilly">Hilly</option>
+            <option value="Tark">Tark</option>
+        </select>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="addRoom()">Submit</button>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="window.location.href = 'index.html';">Back</button>
+</div>
+
+<script src="functions.js"></script>
+</body>
+
+</html>
