@@ -14,11 +14,16 @@
     <h1>Edit Room</h1>
     Welcome to the Editing a room selector!
     <br>
-    What is your ID?
+    Time to edit your room assignment! Which building would you like to live in?
     <br>
-    <input type="text" id="userID" name="userID">
+        <select name="building" id="building">
+            <option value="Freida">Freida</option>
+            <option value="Hilly">Hilly</option>
+            <option value="Tark">Tark</option>
+        </select>
     <br>
-    <button type="button" class="btn btn-primary" onclick=userIDCheck();>Submit</button>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="buildingSelector();window.location.href = 'edit4.html';">Submit</button>
     <br>
     <button type="button" class="btn btn-primary" onclick="window.location.href = 'edit2.html';">Back</button>
 </div>

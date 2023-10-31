@@ -188,6 +188,7 @@ function deleteRoom() {
     }
     };
     alert("Room deleted from user ID");
+    window.location.href = "index.html";
     xhr.send();
 }
 
@@ -251,6 +252,7 @@ function addRoom() {
         }
     };
     alert("Room added to user ID");
+    window.location.href = "index.html";
     xhr.send();
     } else {
         alert("Room does not exist in the building");
