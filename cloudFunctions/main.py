@@ -49,14 +49,13 @@ def getAllRooms(request):
                                   user='root',
                                   database='db1')
   # Create a cursor.
-  cursor = conn.cursor()
-  # Execute the stored procedure.
-  cursor.callproc('getAllRooms', (bID,))
+  cursor = conn.cursor(prepared=True)
+  # cursor.callproc('getAllRooms', (bID,))
+  # Execute the prepared statement.
+  cursor.execute(" SELECT * FROM Rooms WHERE BuildingID = %s;", (bID,))
 
   # Get the results of the stored procedure.
-  c_results = cursor.stored_results()
-  for c_result in c_results:
-    results = c_result.fetchall()
+  results = cursor.fetchall()
   # Close the cursor and connection.
   cursor.close()
   conn.close()
