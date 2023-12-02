@@ -29,6 +29,8 @@ CREATE PROCEDURE getAllRooms(IN bID integer)
          FROM Rooms
          WHERE BuildingID = bID;
        END //
+       
+CREATE INDEX buildingIndex ON Rooms(BuildingID);
 
 DELIMITER ;
 -- CALL addRoom(1121, 1);
